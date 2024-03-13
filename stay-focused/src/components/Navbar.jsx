@@ -8,11 +8,10 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Define an array of page names
-  const pages = ['Home', 'TodoList', 'ChatBot', 'Pomodoro', 'Flashcards', 'Summariser', 'TextToSpeech', 'BionicText'];
+  const pages = ['Home', 'ToDoList', 'ChatBot', 'Pomodoro', 'Flashcards', 'Summariser', 'TextToSpeech', 'BionicText'];
 
   return (
-    <nav className="bg-gradient-to-r font-ubuntu font-normal from-black via-gray-900 to-purple-700 p-4 flex justify-between items-center">
+    <nav className="bg-gradient-to-r from-black via-gray-900 to-purple-700 p-4 font-ubuntu font-normal flex justify-between items-center">
       <div className="md:hidden">
         <button
           className="text-white focus:outline-none"
@@ -48,7 +47,6 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col items-start p-4">
-            {/* Generate navigation links dynamically */}
             {pages.map(page => (
               <Link key={page} to={`/${page.toLowerCase()}`} className="text-white text-lg font-roboto">{page}</Link>
             ))}
@@ -56,10 +54,9 @@ const Navbar = () => {
         </div>
       )}
         <div className="hidden md:flex items-center justify-center flex-1 space-x-8">
-        {/* Generate navigation links dynamically */}
         {pages.map(page => (
                     <Link key={page} to={`/${page.toLowerCase()}`} className="text-white text-lg font-roboto hover:text-white hover:font-semibold hover:underline">
-                    <span className="glow-on-hover">{page}</span> {/* Added glow-on-hover class */}
+                    <span className="glow-on-hover">{page}</span>
                   </Link>
         ))}
       </div>
