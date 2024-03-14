@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ToDoList from './pages/ToDoList';
 import Pomodoro from './pages/Pomodoro';
-// import ChatBot from './pages/ChatBot';
+import ChatBot from './pages/ChatBot';
 import TextToSpeech from './pages/TextToSpeech';
 import BionicText from './pages/BionicText';
 import Summariser from './pages/Summariser';
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/todolist" element={<ToDoList />} />
-          {/* <Route path="/chatbot" element={<ChatBot />} /> */}
+          <Route path="/chatbot" element={<ChatBot />} />
           <Route path="/pomodoro" element={<Pomodoro />} />
           {/* <Route path="/flashcards" element={<Flashcards />} /> */}
           <Route path="/summariser" element={<Summariser />} />
