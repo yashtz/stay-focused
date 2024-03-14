@@ -50,10 +50,10 @@ const Pomodoro = () => {
 
   return (
     <div className="bg-gradient-to-r from-black via-gray-900 to-purple-700 text-white p-8 flex flex-col items-center min-h-screen">
-      <h1 className="text-5xl font-bold mt-12 mb-8">Pomodoro Timer</h1>
+      <h1 className="text-5xl font-bold mt-12 mb-12">Pomodoro Timer</h1>
       <audio src={achievementBellSound} id="timer-sound" />
-      <div className="flex items-center mb-4">
-        <label htmlFor="work-duration" className="text-white text-lg mr-4">
+      <div className="flex items-center mb-8">
+        <label htmlFor="work-duration" className="text-white font-semibold text-lg mr-4">
           Work Duration (minutes):
         </label>
         <input
@@ -64,7 +64,7 @@ const Pomodoro = () => {
           className="bg-gray-800 text-white py-2 px-4 rounded-lg focus:outline-none focus:ring focus:border-purple-500 w-20 h-10"
           onChange={(e) => setWorkDuration(parseInt(e.target.value))}
         />
-        <label htmlFor="break-duration" className="text-white text-lg mx-4">
+        <label htmlFor="break-duration" className="text-white font-semibold text-lg mx-4">
           Break Duration (minutes):
         </label>
         <input
@@ -79,7 +79,7 @@ const Pomodoro = () => {
       <div className="timer text-8xl mb-4">
         {minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
       </div>
-      <div className="controls">
+      <div className="mt-6 controls">
         <button
           className="bg-blue-500 hover:bg-white text-white hover:text-blue-500 border-2 hover:border-blue-500 font-bold py-3 px-6 rounded-lg mr-4 focus:outline-none focus:ring focus:border-purple-500"
           onClick={startTimer}
