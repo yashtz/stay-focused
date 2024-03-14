@@ -30,7 +30,7 @@ const ToDoList = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-700 text-white p-8 flex flex-col items-center h-screen">
+    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center h-screen">
       <h1 className="text-4xl font-bold mb-8">To-Do List</h1>
       <div className="mb-4 flex items-center">
         <input

@@ -8,10 +8,10 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const pages = ['Home', 'To-Do-List', 'ChatBot', 'Pomodoro', 'Summariser', 'TextToSpeech', 'BionicText'];
+  const pages = ['Home', 'ToDoList', 'ChatBot', 'Pomodoro', 'Summariser', 'TextToSpeech', 'BionicText'];
 
   return (
-    <nav className="bg-gradient-to-r from-black via-gray-900 to-purple-700 p-4 font-ubuntu font-normal flex justify-between items-center">
+    <nav className="bg-gradient-to-r from-black via-gray-900 to-purple-900 p-4 font-ubuntu font-normal flex justify-between items-center">
       <div className="md:hidden">
         <button
           className="text-white focus:outline-none"

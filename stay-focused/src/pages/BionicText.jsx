@@ -35,10 +35,10 @@ const BionicText = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-700 text-white p-8 flex flex-col items-center min-h-screen">
-      <h1 className="text-4xl font-bold mb-8">Bionic Text Generator</h1>
+    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center min-h-screen">
+      <h1 className="text-5xl font-bold mt-8 mb-6">Bionic Text Generator</h1>
       <div className="mb-4 flex flex-col items-center">
-        <label htmlFor="fileInput" className="bg-purple-500 hover:bg-purple-700 text-white border-2 font-bold py-2 px-4 rounded-lg cursor-pointer">
+      <label htmlFor="fileInput" className="bg-gray-800 hover:bg-white text-white hover:text-purple-500 text-lg border-2 hover:border-purple-500 font-bold py-4 px-8 rounded-lg cursor-pointer">
           Choose PDF File
         </label>
         <input
@@ -51,7 +51,7 @@ const BionicText = () => {
         {selectedFile && <p className="mt-2">Selected File: {selectedFile.name}</p>}
       </div>
       <button
-        className="bg-purple-500 hover:bg-purple-700 text-white border-2 font-bold py-2 px-4 rounded-lg"
+        className="bg-gray-800 hover:bg-white text-white hover:text-purple-500 border-2 hover:border-purple-500 font-bold text-lg py-4 px-8 rounded-lg cursor-pointer"
         onClick={handleGenerateBionicText}
         disabled={!selectedFile}
       >
