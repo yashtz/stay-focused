@@ -8,8 +8,8 @@ import ToDoList from './pages/ToDoList';
 import Pomodoro from './pages/Pomodoro';
 // import ChatBot from './pages/ChatBot';
 import TextToSpeech from './pages/TextToSpeech';
-// import BionicText from './pages/Bionic';
-// import Summariser from './pages/Summariser';
+import BionicText from './pages/BionicText';
+import Summariser from './pages/Summariser';
 
 
 function App() {  
@@ -24,9 +24,9 @@ function App() {
           {/* <Route path="/chatbot" element={<ChatBot />} /> */}
           <Route path="/pomodoro" element={<Pomodoro />} />
           {/* <Route path="/flashcards" element={<Flashcards />} /> */}
-          {/* <Route path="/summariser" element={<Summariser />} /> */}
+          <Route path="/summariser" element={<Summariser />} />
           <Route path="/texttospeech" element={<TextToSpeech />} />
-          {/* <Route path="/bionictext" element={<BionicText />} /> */}
+          <Route path="/bionictext" element={<BionicText />} />
         </Routes>
         {/* <Footer /> */}
       </div>
