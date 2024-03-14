@@ -22,7 +22,7 @@ const ChatBot = () => {
 
   return (
     <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 p-8 min-h-screen">
-      <h1 className="text-4xl text-center text-white font-bold mb-8">ChatBot</h1>
+      <h1 className="text-5xl text-center text-white font-bold mb-8">ChatBot</h1>
       <div className="bg-gray-700 rounded-lg p-4 mb-4 shadow-md" style={{ height: '400px', overflowY: 'auto' }}>
         {messages.map((message, index) => (
           <div key={index} className={`mb-2 ${message.sender === 'user' ? 'text-right' : 'text-left'}`}>
@@ -31,7 +31,7 @@ const ChatBot = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-center">
+      <div className="flex justify-center items-center">
         <input
           type="text"
           className="flex-grow bg-gray-700 text-white py-2 px-4 rounded-l-lg focus:outline-none"
@@ -51,3 +51,4 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
+
