@@ -3,7 +3,7 @@ from flask_cors import CORS, cross_origin
 from textToSpeech import pdf_to_mp3
 from imp_points import extract_and_summarize  # Ensure this is correctly imported
 from BionicText import convert_to_bionic_reading, extract_text_from_pdf
-
+from chatbot import ask_question
 import os
 
 # Define the temporary directory based on the operating system
@@ -17,7 +17,8 @@ app = Flask(__name__)
 CORS(app, resources={
     r"/generate-speech": {"origins": "*"},
     r"/generate-summary": {"origins": "*"},
-    r"/generate-bionic-text": {"origins": "*"}
+    r"/generate-bionic-text": {"origins": "*"},
+    r"/chatbot": {"origins": "*"} 
 })
 
 
@@ -100,3 +101,19 @@ def generate_bionic_text():
     except Exception as e:
         app.logger.error('Failed to generate bionic text: %s', str(e))
         return jsonify({'error': str(e)}), 500
+
+
+@app.route('/chatbot', methods=['POST'])
+@cross_origin()
+def chatbot_conversation():
+    message_data = request.get_json()
+    user_message = message_data.get('message')
+
+    if not user_message:
+        return jsonify({'error': 'Empty message received'}), 400
+
+    try:
+        response = ask_question(user_message)
+        return jsonify({'message': response}), 200
+    except Exception as e:
+        return jsonify({'error': f'Error processing message: {str(e)}'}), 500
