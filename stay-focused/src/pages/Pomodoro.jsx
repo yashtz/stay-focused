@@ -49,7 +49,7 @@ const Pomodoro = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center min-h-screen">
+    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center min-h-screen font-sans">
       <h1 className="text-5xl font-bold mt-12 mb-12">Pomodoro Timer</h1>
       <audio src={achievementBellSound} id="timer-sound" />
       <div className="flex items-center mb-8">

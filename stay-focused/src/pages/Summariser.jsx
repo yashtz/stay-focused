@@ -35,8 +35,8 @@ const Summariser = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center min-h-screen">
-      <h1 className="text-5xl font-bold mt-8 mb-6">Summary Generator</h1>
+    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center min-h-screen font-sans">
+      <h1 className="text-5xl font-bold mt-12 mb-8">Summary Generator</h1>
       <div className="mb-4 flex flex-col items-center">
         <label htmlFor="fileInput" className="bg-gray-800 hover:bg-white text-white hover:text-purple-500 text-lg border-2 hover:border-purple-500 font-bold py-4 px-8 rounded-lg cursor-pointer">
           Choose PDF File

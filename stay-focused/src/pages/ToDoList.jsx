@@ -30,7 +30,7 @@ const ToDoList = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center h-screen">
+    <div className="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white p-8 flex flex-col items-center h-screen font-sans">
       <h1 className="text-4xl font-bold mb-8">To-Do List</h1>
       <div className="mb-4 flex items-center">
         <input
@@ -41,7 +41,7 @@ const ToDoList = () => {
           onChange={(e) => setNewTask(e.target.value)}
         />
         <button
-          className="bg-purple-700 hover:bg-white text-white hover:text-purple-700 border-2 hover:border-2 hover:border-purple-700 font-bold py-2 px-4 rounded-lg ml-4 focus:outline-none focus:ring focus:border-purple-500"
+          className="bg-gray-700 hover:bg-white text-white hover:text-purple-700 border-2 hover:border-2 hover:border-purple-700 font-bold py-2 px-4 rounded-lg ml-4 focus:outline-none focus:ring focus:border-purple-500"
           onClick={addTask}
         >
           Add Task

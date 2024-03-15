@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Ubuntu', 'sans-serif'],
+        'sans': ['Oxygen', 'sans-serif'],
       },
     },
   },

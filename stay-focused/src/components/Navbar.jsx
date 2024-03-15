@@ -39,12 +39,25 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-gradient-to-r from-black via-gray-900 to-purple-900 w-2/5 z-50">
           <div className="flex justify-end p-4">
-            <button
-              className="text-white"
-              onClick={toggleMobileMenu}
+          <button
+            className="text-white focus:outline-none"
+            onClick={toggleMobileMenu}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Close
-            </button>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
           </div>
           <div className="flex flex-col items-start p-4">
             {pages.map(page => (
