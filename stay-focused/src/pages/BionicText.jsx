@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // Make sure axios is installed
+import axios from 'axios';
 
 const BionicText = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -17,15 +17,13 @@ const BionicText = () => {
         method: 'post',
         url: 'http://localhost:5000/generate-bionic-text',
         data: formData,
-        responseType: 'blob', // Important for handling the binary response
+        responseType: 'blob',
       });
 
-      // Create a URL for the blob
       const url = window.URL.createObjectURL(new Blob([response.data]));
-      // Create a temporary link to download the file
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'bionic_text.txt'); // or extract the filename from the Content-Disposition header
+      link.setAttribute('download', 'bionic_text.txt');
       document.body.appendChild(link);
       link.click();
       link.remove();

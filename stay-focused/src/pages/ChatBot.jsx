@@ -27,7 +27,7 @@ const ChatBot = () => {
         {messages.map((message, index) => (
           <div key={index} className={`mb-2 ${message.sender === 'user' ? 'text-right' : 'text-left'}`}>
             {message.sender === 'user' && <span className="block text-sm text-gray-300">You</span>}
-            <span className={`px-2 py-1 rounded-md ${message.sender === 'user' ? 'bg-gray-500 text-white' : 'bg-purple-500 text-white'}`} style={{ overflowWrap: 'break-word' }}>{message.text}</span>
+            <span className={`px-2 py-1 rounded-md ${message.sender === 'user' ? 'bg-gray-500 text-white' : 'bg-purple-500 text-white'}`} style={{ overflowWrap: 'break-word', display: 'inline-block', maxWidth: '80%', textAlign: 'left', padding: '8px', margin: '4px 0' }}>{message.text}</span>
           </div>
         ))}
       </div>
@@ -51,4 +51,3 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
-

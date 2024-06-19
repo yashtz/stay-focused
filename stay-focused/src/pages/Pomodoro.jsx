@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import achievementBellSound from '../resources/achievement-bell.mp3'; // Import the audio file
+import achievementBellSound from '../resources/achievement-bell.mp3'; 
 
 const Pomodoro = () => {
-  // State for timer values
   const [workDuration, setWorkDuration] = useState(25);
   const [breakDuration, setBreakDuration] = useState(5);
   const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
-
-  // Create an audio object
   const timerSound = new Audio(achievementBellSound);
 
   useEffect(() => {
@@ -18,8 +15,7 @@ const Pomodoro = () => {
         if (seconds === 0) {
           if (minutes === 0) {
             clearInterval(timer);
-            // Handle session completion
-            timerSound.play(); // Play the audio
+            timerSound.play();
             return;
           } else {
             setMinutes((prevMinutes) => prevMinutes - 1);
